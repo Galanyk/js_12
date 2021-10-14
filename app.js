@@ -1,96 +1,54 @@
-const Hamburger = {
-    SIZE_SMALL: { param: "SIZE_SMALL", price: 50, calorie: 20 },
-    SIZE_MEDIUM: { param: "SIZE_MEDIUM", price: 75, calorie: 30 },
-    SIZE_LARGE: { param: "SIZE_LARGE", price: 100, calorie: 40 },
-    STUFFING_CHEESE: { param: "STUFFING_CHEESE", price: 10, calorie: 20 },
-    STUFFING_SALAD: { param: "STUFFING_SALAD", price: 20, calorie: 5 },
-    STUFFING_POTATO: { param: "STUFFING_POTATO", price: 15, calorie: 10 },
-    TOPPING_MAYO: { param: "TOPPING_MAYO", price: 20, calorie: 5 },
-    TOPPING_CONDIMENT: { param: "TOPPING_CONDIMENT", price: 15, calorie: 0 }
-};
+class Hamburger {
+    static SIZE_SMALL = { param: "SIZE_SMALL", price: 50, calorie: 20 };
+    static SIZE_MEDIUM = { param: "SIZE_MEDIUM", price: 75, calorie: 30 };
+    static SIZE_LARGE = { param: "SIZE_LARGE", price: 100, calorie: 40 };
+    static STUFFING_CHEESE = { param: "STUFFING_CHEESE", price: 10, calorie: 20 };
+    static STUFFING_SALAD = { param: "STUFFING_SALAD", price: 20, calorie: 5 };
+    static STUFFING_POTATO = { param: "STUFFING_POTATO", price: 15, calorie: 10 };
+    static TOPPING_MAYO = { param: "TOPPING_MAYO", price: 20, calorie: 5 };
+    static TOPPING_CONDIMENT = { param: "TOPPING_CONDIMENT", price: 15, calorie: 0 };
 
-class NewHamburger {
     constructor(hamburger) {
-        this.price = hamburger.price;
-        this.calories = hamburger.calorie;
+        this._price = hamburger.price;
+        this._calories = hamburger.calorie;
     };
 
-    AddTopping = function(topping) {
-        this.price += topping.price;
-        this.calories += topping.calorie;
+    addTopping = function(topping) {
+        this._price += topping.price;
+        this._calories += topping.calorie;
     }
 
-    SetPrice(price) {
-        this.price += price;
+    set setPrice(price) {
+        this._price += price;
     }
 
-    setColories(calories) {
-        this.calories += calories;
+    set setCalories(calories) {
+        this._calories += calories;
     }
 
-    GetPrice() {
-        return this.price;
+    get getPrice() {
+        return this._price;
     }
 
-    GetCalories() {
-        return this.calories;
+    get getCalories() {
+        return this._calories;
     }
 };
 
-const ham = new NewHamburger(Hamburger.SIZE_SMALL);
-//alert("Price: " + ham.price + "\nColories: " + ham.calories);
-ham.AddTopping(Hamburger.TOPPING_CONDIMENT);
-//alert("First" + "Price: " + ham.price + "\nColories: " + ham.calories);
+const hamburger = new Hamburger(Hamburger.SIZE_SMALL);
+const hamburgerSecond = new Hamburger(Hamburger.SIZE_MEDIUM);
 
-const secondHam = new NewHamburger(Hamburger.SIZE_LARGE);
+hamburger.addTopping(Hamburger.TOPPING_CONDIMENT);
+hamburger.addTopping(Hamburger.STUFFING_POTATO);
+hamburgerSecond.addTopping(Hamburger.STUFFING_SALAD);
 
-//alert("Second\n" + "Price: " + secondHam.price + "\nColories: " + secondHam.calories);
+console.log(`Price with sauce: ` + hamburger.getPrice);
+console.log(`Callories with sauce: ` + hamburger.getCalories);
+console.log(`Price with sauce: ` + hamburgerSecond.getPrice);
+console.log(`Callories with sauce: ` + hamburgerSecond.getCalories);
+// console.log("First" + "Price: " + hamburger.getPrice + "\nColories: " + hamburger.getCalories);
+// const secondHam = new Hamburger(Hamburger.SIZE_LARGE);
+// console.log("Second\n" + "Price: " + secondHam.getPrice + "\nColories: " + secondHam.getCalories);
+// console.log(hamburger.getCalories);
 
-console.log(ham.GetCalories());
-
-ham.getColories(20);
-
-console.log(ham.GetCalories());
-
-
-// function OrderHamburger(humburger) {
-//     this.price = humburger.price;
-//     this.calorie = humburger.calorie;
-
-//     this.addTopping = function(topping) {
-//         this.price += topping.price;
-//         this.calorie += topping.calorie;
-//     }
-// }
-
-// const hamburger = new OrderHamburger(Hamburger.SIZE_MEDIUM);
-// hamburger.addTopping(Hamburger.TOPPING_MAYO);
-// hamburger.addTopping(Hamburger.STUFFING_CHEESE);
-
-
-
-// console.log(hamburger.price + "\n" + hamburger.calorie);
-
-// function Burger(size) {
-//     this.size = size;
-//     this.kkal = 20;
-//     this.cost = 50;
-// }
-
-// const burger = new Burger("Small");
-// const burger1 = new Burger("Medium");
-// const burger2 = new Burger("Big");
-
-// console.log(burger.size)
-// console.log(burger.kkal)
-// console.log(burger.cost)
-
-
-
-// function FillingHamburger() {
-//     this.cheese = cheese;
-//     this.salad = salad;
-//     this.potatoes = potatoes;
-//     this.condiment = condiment;
-//     this.mayo = mayo;
-// }
+// console.log(hamburger.getPrice);
