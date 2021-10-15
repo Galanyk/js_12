@@ -40,15 +40,14 @@ const hamburgerSecond = new Hamburger(Hamburger.SIZE_MEDIUM);
 
 hamburger.addTopping(Hamburger.TOPPING_CONDIMENT);
 hamburger.addTopping(Hamburger.STUFFING_POTATO);
+hamburger.addTopping(Hamburger.STUFFING_SALAD);
+hamburger.addTopping(Hamburger.STUFFING_CHEESE);
+
 hamburgerSecond.addTopping(Hamburger.STUFFING_SALAD);
+hamburgerSecond.addTopping(Hamburger.TOPPING_CONDIMENT);
 
 console.log(`Price with sauce: ` + hamburger.getPrice);
 console.log(`Callories with sauce: ` + hamburger.getCalories);
+
 console.log(`Price with sauce: ` + hamburgerSecond.getPrice);
 console.log(`Callories with sauce: ` + hamburgerSecond.getCalories);
-// console.log("First" + "Price: " + hamburger.getPrice + "\nColories: " + hamburger.getCalories);
-// const secondHam = new Hamburger(Hamburger.SIZE_LARGE);
-// console.log("Second\n" + "Price: " + secondHam.getPrice + "\nColories: " + secondHam.getCalories);
-// console.log(hamburger.getCalories);
-
-// console.log(hamburger.getPrice);
