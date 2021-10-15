@@ -36,7 +36,7 @@ class Hamburger {
 };
 
 const hamburger = new Hamburger(Hamburger.SIZE_SMALL);
-const hamburgerSecond = new Hamburger(Hamburger.SIZE_MEDIUM);
+// const hamburgerSecond = new Hamburger(Hamburger.SIZE_MEDIUM);
 
 hamburger.addTopping(Hamburger.TOPPING_CONDIMENT);
 hamburger.addTopping(Hamburger.STUFFING_POTATO);
