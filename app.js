@@ -43,11 +43,11 @@ hamburger.addTopping(Hamburger.STUFFING_POTATO);
 hamburger.addTopping(Hamburger.STUFFING_SALAD);
 hamburger.addTopping(Hamburger.STUFFING_CHEESE);
 
-hamburgerSecond.addTopping(Hamburger.STUFFING_SALAD);
-hamburgerSecond.addTopping(Hamburger.TOPPING_CONDIMENT);
+// hamburgerSecond.addTopping(Hamburger.STUFFING_SALAD);
+// hamburgerSecond.addTopping(Hamburger.TOPPING_CONDIMENT);
 
 console.log(`Price with sauce: ` + hamburger.getPrice);
 console.log(`Callories with sauce: ` + hamburger.getCalories);
 
-console.log(`Price with sauce: ` + hamburgerSecond.getPrice);
-console.log(`Callories with sauce: ` + hamburgerSecond.getCalories);
+// console.log(`Price with sauce: ` + hamburgerSecond.getPrice);
+// console.log(`Callories with sauce: ` + hamburgerSecond.getCalories);
